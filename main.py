@@ -57,7 +57,7 @@ wandb.init(
         "dataset": "ChatDoctor-HealthCareMagic-100k",
         "samples": 10_000,
         "rank": 4,
-        "alpha": 82,
+        "alpha": 8,
         "dropout": 0.05,
         "learning_rate": 1e-4,
         "epochs": 1,
@@ -122,7 +122,7 @@ print("LoRA adapter saved → lora_adapter.pt")
 model.eval()
 
 def chat(message):
-    prompt = f"<s>[INST] You are a helpful medical assistant. {message} [/INST]"
+    prompt = f"<s>[INST] You are a helpful medical assistant. Never make a diagnosis. Only suggest possible explanations and always recommend consulting a real doctor. {message} [/INST]"
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     
     with torch.no_grad():
