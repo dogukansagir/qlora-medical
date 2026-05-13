@@ -53,7 +53,10 @@ python main.py
 ```
 ## Jupyter Notebook
 
-You can also use `notebook.ipynb` in order to train the model and run inference on it.
+You can also use `notebook.ipynb` in order to train the model and run inference on it. Jupyter library has to be installed in your Python to run it.
+```bash
+pip install jupyter
+```
 
 ## How It Works
 
