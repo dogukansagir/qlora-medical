@@ -27,7 +27,7 @@ The model is trained with **QLoRA** (4‑bit quantisation + Low‑Rank Adaptatio
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/dogukansagir/medical-qlora.git
+git clone https://github.com/dogukansagir/qlora-medical.git
 cd medical-qlora
 ```
 ### 2. Install dependencies
