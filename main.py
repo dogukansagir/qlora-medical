@@ -117,30 +117,3 @@ lora_state_dict = {
 }
 torch.save(lora_state_dict, "lora_adapter.pt")
 print("LoRA adapter saved → lora_adapter.pt")
-
-# Load adapter and run demo
-model.eval()
-
-def chat(message):
-    prompt = f"<s>[INST] You are a helpful medical assistant. Never make a diagnosis. Only suggest possible explanations and always recommend consulting a real doctor. {message} [/INST]"
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=300,
-            temperature=0.7,
-            do_sample=True,
-            repetition_penalty=1.1,
-        )
-    
-    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    return response.split("[/INST]")[-1].strip()
-
-gr.Interface(
-    fn=chat,
-    inputs=gr.Textbox(label="Your medical question"),
-    outputs=gr.Textbox(label="Medical Assistant"),
-    title="Medical Assistant — QLoRA fine-tuned Mistral 7B",
-    description="Fine-tuned on ChatDoctor-HealthCareMagic-100k dataset"
-).launch()
