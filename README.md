@@ -51,6 +51,10 @@ This launches a Gradio chat UI at http://127.0.0.1:7860
 ```bash
 python main.py
 ```
+## Jupyter Notebook
+
+You can also use `notebook.ipynb` in order to train the model and run inference on it.
+
 ## How It Works
 
 | Component | Description |
