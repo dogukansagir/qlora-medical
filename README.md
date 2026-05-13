@@ -20,10 +20,6 @@ The model is trained with **QLoRA** (4‑bit quantisation + Low‑Rank Adaptatio
 
 ## Requirements
 
-Install dependencies from `requirements.txt`:
-```bash
-pip install -r requirements.txt
-```
 - Python ≥ 3.12
 - CUDA compatible GPU (8+ GB VRAM is recommended)
 
