@@ -1,6 +1,6 @@
 # Medical Assistant – QLoRA Fine‑tuned Mistral‑7B
 
-[![Python 3.12+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 
 This repository contains code and a **LoRA adapter** for fine‑tuning `mistralai/Mistral-7B-Instruct-v0.3` on the [ChatDoctor‑HealthCareMagic‑100k](https://huggingface.co/datasets/lavita/ChatDoctor-HealthCareMagic-100k) dataset.
 
