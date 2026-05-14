@@ -96,3 +96,7 @@ pip install jupyter
 - bitsandbytes and transformers by Hugging Face
 
 **Disclaimer:** This software is provided "as is". The authors are not responsible for any misuse or for any medical decisions made based on the model's output. Always consult a qualified healthcare professional for medical advice.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
