@@ -60,7 +60,7 @@ pip install jupyter
 |-----------|-------------|
 | **Quantised Base Model** | Mistral-7B loaded with 4-bit NF4 quantisation. All parameters frozen except LoRA. |
 | **LoRA Injection** | Low-rank matrices (rank=4, alpha=8) added to q_proj and v_proj. Only ~4.2M trainable parameters. |
-| **Dataset Formatting** | Each dialogue wrapped as: <s>[INST] {input} [/INST] {output}</s> |
+| **Dataset Formatting** | Each dialogue wrapped as: ```<s>[INST] {input} [/INST] {output}</s>``` |
 | **Training** | Causal language modelling loss, AdamW (lr=1e-4), cosine schedule, gradient checkpointing |
 | **Inference** | LoRA structure re-created, adapter loaded with strict=False |
 
