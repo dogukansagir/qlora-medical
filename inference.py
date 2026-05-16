@@ -41,7 +41,7 @@ tokenizer.pad_token = tokenizer.eos_token
 
 def chat(message):
     device = next(model.parameters()).device
-    prompt = f"<s>[INST] You are a helpful medical assistant. Never make a diagnosis. Only suggest possible explanations and always recommend consulting a real doctor. {message} [/INST]"
+    prompt = f"<s>[INST] If you are a doctor, please answer the medical questions based on the patient's description. {message} [/INST]"
     inputs = tokenizer(prompt, return_tensors="pt").to(device)
     
     with torch.no_grad():
